@@ -1,0 +1,20 @@
+numpy
+matplotlib
+scikit-learn
+
+or open the notebook and run all cells.
+
+## Results
+
+### SSE values (K = 1 to 10)
+Paste the printed SSE table here.
+
+### Elbow Method Interpretation
+Paste the 150–200 word explanation here.
+
+### Final Clustering Analysis
+Paste the 200–300 word analysis of the visualization here.
+
+## Files
+- `kmeans_from_scratch.py` or `.ipynb` – core implementation
+- `requirements.txt` – dependencies

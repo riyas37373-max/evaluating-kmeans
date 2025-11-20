@@ -1,0 +1,41 @@
+K-Means Clustering Results Report
+This report summarizes the K-Means clustering analysis performed on a synthetic dataset.
+
+1. Dataset Description
+The clustering was performed on a synthetic 2-dimensional dataset generated using make_blobs from sklearn.datasets. The dataset consists of 500 data points, with an inherent structure of 4 distinct clusters (true centers).
+
+2. K-Means Algorithm Methodology
+The K-Means algorithm was implemented from scratch using NumPy. The key steps involved are:
+
+Initialization: Randomly selecting K data points from the dataset as initial centroids.
+Assignment: Assigning each data point to the cluster whose centroid is closest (based on Euclidean distance).
+Update: Recalculating the centroids as the mean of all data points assigned to that cluster.
+Convergence: Repeating the assignment and update steps until the centroids no longer move significantly (change is below a specified tolerance) or a maximum number of iterations is reached.
+Sum of Squared Errors (SSE): Calculating the sum of squared distances of each point to its assigned centroid, used as a metric for cluster quality.
+3. Determining Optimal K using the Elbow Method
+To find the optimal number of clusters (K), the Elbow Method was applied. K-Means was run for K values ranging from 1 to 10, and the Sum of Squared Errors (SSE) was recorded for each run.
+
+The SSE values observed were:
+
+K = 1, SSE = 33140.86
+K = 2, SSE = 19773.33
+K = 3, SSE = 2899.96
+K = 4, SSE = 341.60
+K = 5, SSE = 310.35
+K = 6, SSE = 297.13
+K = 7, SSE = 288.54
+K = 8, SSE = 283.85
+K = 9, SSE = 252.13
+K = 10, SSE = 236.75
+The elbow plot clearly shows a significant drop in SSE from K=1 to K=2, and then from K=2 to K=3. The most pronounced 'elbow' or bend in the curve appears at K=4, after which the decrease in SSE becomes less dramatic. This suggests that adding more clusters beyond 4 provides diminishing returns in terms of reducing within-cluster variance.
+
+4. Final Clustering Results
+Based on the Elbow Method, the optimal number of clusters was determined to be K = 4. The K-Means algorithm was then run with this optimal K.
+
+Optimal K Chosen: 4
+Final SSE for K=4: 341.60
+The visualization provided below shows the final clustering with the 4 identified clusters and their respective centroids. The clusters appear well-separated and distinct, which is consistent with the synthetic dataset's generation parameters.
+
+5. Conclusion
+The K-Means clustering algorithm successfully identified 4 distinct clusters within the synthetic dataset, aligning with the ground truth of the data generation. The Elbow Method proved effective in guiding the selection of the optimal number of clusters, leading to a meaningful and interpretable segmentation of the data.
+

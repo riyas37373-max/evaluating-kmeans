@@ -1,0 +1,10 @@
+Using the optimal value 
+K
+=
+4
+K=4, the K-Means algorithm was run on the two-dimensional synthetic dataset, and the resulting clusters were visualized with points colored by their assigned labels and centroids marked explicitly. The visualization shows four well-separated groups, each forming a compact, roughly spherical cluster around its corresponding centroid. This indicates that the algorithm successfully recovered the underlying structure of the data and approximated the true centers used during data generation. Most points appear close to their cluster centroids, suggesting low within-cluster variance and a good overall fit.
+
+The clear gaps between clusters highlight one of the strengths of K-Means when applied to data that is approximately isotropic and linearly separable in Euclidean space. However, the experiment also illustrates some limitations of the algorithm. K-Means assumes that clusters are convex and of similar size, which works well for these Gaussian blobs but would struggle with non-spherical or highly imbalanced clusters. In addition, the algorithm is sensitive to the initialization of centroids; different random seeds can lead to slightly different solutions, especially in more complex datasets. Finally, K-Means requires the number of clusters 
+K
+K to be chosen in advance, making methods like the Elbow Method or domain knowledge essential for robust application in real-world scenarios.
+

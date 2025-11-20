@@ -1,0 +1,38 @@
+
+In this project, the Elbow Method was applied by running the custom K-Means implementation for 
+K
+=
+1
+K=1 to 
+K
+=
+10
+K=10 and computing the Sum of Squared Errors (SSE) for each value of 
+K
+K. As expected, the SSE decreases monotonically as 
+K
+K increases, because adding more clusters always reduces within-cluster variance. However, the rate of decrease changes noticeably around 
+K
+=
+4
+K=4. Until 
+K
+=
+4
+K=4, the SSE drops sharply, indicating that additional clusters are significantly improving the fit. After 
+K
+=
+4
+K=4, the SSE curve starts to flatten, and further increases in 
+K
+K yield only marginal reductions in SSE. This “elbow” shape suggests that 
+K
+=
+4
+K=4 captures the natural structure in the data without overfitting. Choosing a larger 
+K
+K would complicate the model while providing little additional explanatory power. Therefore, 
+K
+=
+4
+K=4 is selected as the optimal number of clusters for this dataset, which also aligns with the known number of true centers used to generate the synthetic dat
